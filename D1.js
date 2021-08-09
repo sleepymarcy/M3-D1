@@ -1,8 +1,17 @@
 /*
-
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
+
+const sum = function(a, b){    
+    sum = a+b
+    if (a==b){
+        sum *=3
+    }
+    return sum
+    // return (a+b) * (a==b? 3:1)
+}
+
 
 
 /*
@@ -10,33 +19,68 @@ Create a function to calculate the sum of the two given integers. If the two val
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
 
+const check = function(a, b){
+    return a == 50 || b == 50 || a+b == 50
+}
+
+
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
 
-/*
+const chop = function(string, index){
+    return string.slice(index)
+}
 
+// console.log(chop('Strive', 1))
+
+/*
 4)
  Create a function to find the largest of three given integers.
 */
+
+    const largest = function(a, b, c){
+        return Math.max(a, b, c)
+    }
 
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
+    const isInRange = function(x){
+        return (x>=40 && x<=60) || (x>=70 && x<=100)
+    }
+
+    const areInRange = function(a, b){
+        return isInRange(a) && isInRange(b)
+    }
+
 
 /*
 6) 
-
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
-/*
+const copy = function(given_string, number){
+    let new_string = given_string
+    for(i = 1; i < number; i++){
+        new_string += given_string
+    }
+    return new_string
+}
 
+
+/*
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
+
+const cityName = function(city){
+    if(!city.indexOf('Los') || !city.indexOf('New')) return city
+    else return ""
+}
+
 
 /*
 8)
