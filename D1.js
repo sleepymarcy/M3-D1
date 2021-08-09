@@ -1,6 +1,5 @@
 /*
-1)
-Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
+1)Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
 
 const sum = function(a, b){    
@@ -15,8 +14,7 @@ const sum = function(a, b){
 
 
 /*
-2)
-Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+2)Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
 
 const check = function(a, b){
@@ -25,8 +23,7 @@ const check = function(a, b){
 
 
 /*
-3)
-Create a function to remove a character at the specified position of a given string and return the new string.
+3)Create a function to remove a character at the specified position of a given string and return the new string.
 */
 
 const chop = function(string, index){
@@ -36,8 +33,7 @@ const chop = function(string, index){
 // console.log(chop('Strive', 1))
 
 /*
-4)
- Create a function to find the largest of three given integers.
+4)Create a function to find the largest of three given integers.
 */
 
     const largest = function(a, b, c){
@@ -45,8 +41,7 @@ const chop = function(string, index){
     }
 
 /*
-5)
-Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+5)Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
     const isInRange = function(x){
         return (x>=40 && x<=60) || (x>=70 && x<=100)
@@ -58,8 +53,7 @@ Create a function to check whether two numbers are in range 40..60 or in the ran
 
 
 /*
-6) 
-Create a function to create a new string of specified copies (positive number) of a given string.
+6)Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
 const copy = function(given_string, number){
@@ -72,8 +66,7 @@ const copy = function(given_string, number){
 
 
 /*
-7)
-Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
+7)Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
 
 const cityName = function(city){
@@ -83,26 +76,67 @@ const cityName = function(city){
 
 
 /*
-8)
-Create a function to calculate the sum of three elements of a given array of integers of length 3.
+8)Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
 
-/*
+const sumOf = function(array){
+    let sum = 0
+    
+    // this one is the best bc it works for any array of arbitrary length
+    // array.forEach( (number) => {sum += number} )
 
-9)
-Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
+    // for(i = 0; i < 3; i++) sum += array[i]
+    // return sum
+
+    return array[0]+array[1]+array[2]
+}
+
+// console.log(sumOf([1,2,3]))
+
+/*
+9)Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
 
+// const is3or1 = function(number){
+//     return (number == 3) || (number == 1)
+// }
+
+// const numtester = function(n1, n2){
+//     return (is3or1(n1)) || (is3or1(n2))
+// }
+ 
+const test = function(n1, n2){
+    return n1.includes(1 || 3) || n2.includes(1 || 3)
+}
+
+
 /*
+10)Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+*/
 
-10)
+const testNot = function(n1, n2){
+    return !n1.includes(1 || 3) || !n2.includes(1 || 3)
+}
 
-Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
 
-11)
+/*
+11)Create a function to find the longest string from a given array of strings.
+*/
 
-Create a function to find the longest string from a given array of strings.
 
+const longest = function(array){
+    let long1 = 0
+    for (i=0; i<array.length; i++){
+        if (array[i].length > long1){
+            long1 = array[i].length
+        }
+    }
+    return long1
+}
+
+// console.log(longest(['doggo', 'cucumber', 'seven', 'potato', 'one']))
+
+/*
 12)
 
 Create a function to find the types of a given angle.
